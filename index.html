@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bloom | Coffee House</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7f0;
+      color: #203b2e;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: #203b2e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d8b78a;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      background:
+        linear-gradient(90deg, #14281fe8, #14281f55),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      animation: appear 1s ease;
+    }
+
+    .eyebrow {
+      color: #e1bd8b;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.08;
+      margin: 22px 0;
+    }
+
+    .hero p {
+      line-height: 1.8;
+      color: #eee8df;
+      max-width: 440px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d8b78a;
+      color: #203b2e;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f0d5ae;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #a87946;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin: 15px 0;
+    }
+
+    .intro {
+      color: #6c716b;
+      line-height: 1.7;
+      max-width: 550px;
+      margin: 0 auto 40px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      text-align: left;
+    }
+
+    .menu-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #203b2e0d;
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 12px 25px #203b2e1a;
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-info {
+      padding: 22px;
+    }
+
+    .menu-info p {
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 10px 0 16px;
+    }
+
+    .price {
+      color: #a87946;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #eae6da;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: 20px auto;
+      line-height: 1.9;
+      color: #555d53;
+    }
+
+    .contact {
+      background: #203b2e;
+      color: white;
+    }
+
+    .contact p {
+      margin: 15px 0 25px;
+      color: #e0e5dc;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #14281f;
+      color: #c9d0c8;
+      text-align: center;
+      padding: 22px;
+      font-size: 13px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 12px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 60px 6%;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">☕ BREW & BLOOM</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">YOUR DAILY DOSE OF HAPPY</div>
+        <h1>Life begins<br>after coffee.</h1>
+        <p>
+          Discover freshly brewed coffee, delicious pastries,
+          and a cozy space made for your favorite moments.
+        </p>
+        <a href="#menu" class="btn">Explore Our Menu →</a>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="section-label">MADE WITH LOVE</div>
+      <h2>Our Favorites</h2>
+      <p class="intro">
+        Every cup tells a story. Find your new favorite
+        from our handcrafted selection.
+      </p>
+
+      <div class="menu-grid">
+        <article class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+            alt="Iced coffee"
+          >
+          <div class="menu-info">
+            <h3>Iced Caramel Latte</h3>
+            <p>Espresso, creamy milk, ice, and sweet caramel.</p>
+            <div class="price">₱150</div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
+            alt="Hot cappuccino"
+          >
+          <div class="menu-info">
+            <h3>Classic Cappuccino</h3>
+            <p>Rich espresso topped with silky, foamy milk.</p>
+            <div class="price">₱130</div>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80"
+            alt="Freshly baked pastries"
+          >
+          <div class="menu-info">
+            <h3>Fresh Butter Croissant</h3>
+            <p>Golden, flaky pastry baked for your morning.</p>
+            <div class="price">₱95</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-label">OUR LITTLE STORY</div>
+      <h2>More than just coffee.</h2>
+      <p>
+        Brew & Bloom was created around one simple idea:
+        life's best moments deserve a really good cup of coffee.
+        Whether you're catching up with friends, studying,
+        or enjoying a quiet morning, there's a seat for you here.
+      </p>
+      <a class="btn" href="#contact">Come Say Hello</a>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-label">WE'RE SAVING YOU A SEAT</div>
+      <h2>Let's Have a Coffee</h2>
+      <p>
+        Monday – Sunday<br>
+        8:00 AM – 9:00 PM<br>
+        Manila, Philippines
+      </p>
+      <button class="btn" onclick="sayHello()">
+        Get in Touch ☕
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Brew & Bloom Coffee House. Made with ♥ and coffee.
+  </footer>
+
+  <script>
+    function sayHello() {
+      alert(
+        "Thanks for stopping by Brew & Bloom! ☕\n\n" +
+        "We look forward to seeing you."
+      );
+    }
+  </script>
+
+</body>
+</html>
